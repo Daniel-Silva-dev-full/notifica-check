@@ -1,10 +1,10 @@
 # NotifiCheck – Verificador de Notificações do  
 
-O **NotifiCheck** é um app simples e direto, criado para ajudar você a verificar se aquela notificação do   que apareceu no seu celular é real ou pode ser uma tentativa de golpe. Ele usa inteligência artificial para analisar imagens e dizer se são confiáveis ou suspeitas.
+O **NotifiCheck** é um app simples e direto, criado para ajudar você a verificar se aquela notificação que apareceu no seu celular é real ou pode ser uma tentativa de golpe. Usamos inteligência artificial para analisar imagens e dizer se são verdadeiras, aqueles prints dos ganhos do tigrinho mesmo, uque deve costumar ver no seu Instagram.
 
 ## Como funciona?
 
-O projeto foi desenvolvido separando bem a parte visual da parte lógica. Isso ajuda a manter tudo organizado e fácil de manter:
+O projeto foi desenvolvido separando o back e o front.
 
 - **Backend (FastAPI)**: é a parte que processa as imagens e faz a verificação de autenticidade.
 - **Frontend (Flet)**: é a interface onde você interage, envia a imagem e recebe o resultado de forma rápida e simples.
@@ -58,7 +58,7 @@ O projeto foi desenvolvido separando bem a parte visual da parte lógica. Isso a
    pip install flet pillow requests
    ```
 
-2. **Salve o código do frontend** em um arquivo chamado `notificheck_app.py`.
+2. **Salve o código do frontend** em um arquivo chamado `appcheck_app.py`.
 
 ## Rodando o projeto
 
@@ -75,7 +75,7 @@ O projeto foi desenvolvido separando bem a parte visual da parte lógica. Isso a
 
 1. Rode o aplicativo Flet com:
    ```bash
-   python notificheck_app.py
+   python appcheck_app.py
    ```
 
 ## Licença

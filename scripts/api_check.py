@@ -17,13 +17,13 @@ import tensorflow as tf
 from pydantic import BaseModel
 import shutil
 
-# Suprimir mensagens de aviso do TensorFlow
+# remover mensagens de aviso do TensorFlow
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 app = FastAPI(
     title="NotifiCheck API",
-    description="API para verificação de notificações do Nubank",
+    description="API para verificação de notificações",
     version="1.0.0"
 )
 
@@ -36,7 +36,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Carregar o modelo VGG16 ao iniciar o servidor
+# Carregar o modelo VGG16
 model = None
 
 
@@ -48,7 +48,7 @@ async def startup_event():
     model = Model(inputs=base_model.input, outputs=base_model.output)
     print("Modelo carregado com sucesso!")
 
-# extrair características de uma imagem usando VGG16
+# extrair características de uma imagem  
 
 
 def extract_features(img, model):
@@ -58,7 +58,7 @@ def extract_features(img, model):
     features = model.predict(img, verbose=0)  # Desativar saída verbosa
     return features.flatten()
 
-# calcular a similaridade entre duas imagens usando SSIM
+# calcular a similaridade entre duas imagens
 
 
 def compare_images_ssim(img1, img2):
@@ -79,7 +79,7 @@ def compare_images_ssim(img1, img2):
 def compare_features(features1, features2):
     return np.dot(features1, features2) / (np.linalg.norm(features1) * np.linalg.norm(features2))
 
-# Criar um gráfico de confiança
+# Criar um gráfico
 
 
 def create_confidence_chart(confidence, threshold):

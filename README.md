@@ -1,4 +1,4 @@
-# NotifiCheck – Verificador de Notificações do  
+# NotifiCheck – Verificador de Notificações
 
 O **NotifiCheck** é um app simples e direto, criado para ajudar você a verificar se aquela notificação que apareceu no seu celular é real ou pode ser uma tentativa de golpe. Usamos inteligência artificial para analisar imagens e dizer se são verdadeiras, aqueles prints dos ganhos do tigrinho mesmo, uque deve costumar ver no seu Instagram.
 
